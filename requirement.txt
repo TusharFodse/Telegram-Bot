@@ -1,0 +1,7 @@
+python-telegram-bot
+openrouter
+langchain 
+langgraph 
+requests 
+apscheduler 
+praw
