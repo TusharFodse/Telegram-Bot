@@ -5,3 +5,7 @@ langgraph
 requests 
 apscheduler 
 praw
+langchain-openai
+langchain-openrouter
+langchain-community 
+duckduckgo-search
