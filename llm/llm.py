@@ -4,6 +4,7 @@ from langchain.agents import create_agent
 from dotenv import load_dotenv
 load_dotenv()
 model_key=os.getenv('OPENROUTER_KEY')
+print("API KEY:", model_key)
 class FutureScope_Bot():
     def __init__(self,name:str,temp:int,model_key:str):
         self.llm=ChatOpenRouter(model=name,temperature=temp,api_key=model_key,)
