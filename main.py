@@ -11,9 +11,23 @@ from datetime import timedelta
 import pytz
 import sqlite3
 from tools.database import add_subscriber,get_subscriber,init_db
+from flask import Flask
+import threading
 
 load_dotenv()
 init_db()
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return "Telegram Bot Running"
+
+def run_web():
+    app.run(host="0.0.0.0", port=10000)
+
+# start flask in another thread
+threading.Thread(target=run_web).start()
+
 
 last_fetch = None
 cached_news = None
